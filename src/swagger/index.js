@@ -2,6 +2,7 @@ const AppConfig = require("../constant/constant");
 const Student = require("./contents/student.docs");
 const Staff = require("./contents/staff.docs");
 const Course = require("./contents/course.doc");
+const Auth = require('./contents/auth.docs')
 
 module.exports = {
     "swagger": "2.0",
@@ -39,11 +40,13 @@ module.exports = {
     definitions: {
         ...Student.definations,
         ...Staff.definations,
-        ...Course.definations
+        ...Course.definations,
+        ...Auth.definations
     },
     paths: {
         ...Student.path,
         ...Staff.path,
-        ...Course.path
+        ...Course.path,
+        ...Auth.path
     }
 }

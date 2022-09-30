@@ -73,7 +73,7 @@ exports.path = {
             tags: ["Student"],
             operationId: "/student",
             summary: "Get all Student",
-            // security: [{ JWT: [] }],
+            security: [{ JWT: [] }],
             parameters: [],
             responses: {
                 200: {
@@ -90,7 +90,7 @@ exports.path = {
             tags: ["Student"],
             operationId: "/student/{id}",
             summary: "Get Student by id",
-            // security: [{ JWT: [] }],
+            security: [{ JWT: [] }],
             parameters: [
                 {
                     name: "studentId",
@@ -115,7 +115,7 @@ exports.path = {
             operationId: "/student/add",
             summary: "Insert Student Details",
             description: "Insert Student Details",
-            // security: [{ JWT: [] }],
+            security: [{ JWT: [] }],
             parameters: [
                 {
                     name: "Student Registration",
@@ -143,7 +143,7 @@ exports.path = {
             tags: ["Student"],
             operationId: "/student/{StudentId}/update",
             summary: "Update Student Details",
-            // security: [{ JWT: [] }],
+            security: [{ JWT: [] }],
             parameters: [
                 {
                     name: "StudentId",
@@ -178,7 +178,7 @@ exports.path = {
             operationId: "/student/{id}/delete",
             summary: "delete Student by id",
             description: "delete Student by id",
-            // security: [{ JWT: [] }],
+            security: [{ JWT: [] }],
             parameters: [
                 {
                     name: "id",
