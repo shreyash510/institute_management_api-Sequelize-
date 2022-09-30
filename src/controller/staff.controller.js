@@ -25,6 +25,7 @@ module.exports = {
         }
     },
     addStaff: async function (req, res) {
+        // console.log(req.body);
         try {
             let staff = await service.addStaff(req.body);
             res.statusCode = 200;

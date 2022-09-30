@@ -1,5 +1,5 @@
 const { Model, Sequelize, DataTypes } = require('sequelize');
-const sequelize = new Sequelize('sqlite::memory:');
+// const sequelize = new Sequelize('sqlite::memory:');
 
 module.exports = (sequelizeInstance) => {
     class Student extends Model { }

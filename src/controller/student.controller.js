@@ -24,16 +24,6 @@ module.exports = {
             res.send(error.message);
         }
     },
-    addStudent: async function (req, res) {
-        try {
-            let student = await service.addStudent(req.body);
-            res.statusCode = 200;
-            res.send(student);
-        } catch (error) {
-            res.statusCode = 500;
-            res.send(error.message);
-        }
-    },
     update: async function (req, res) {
         // console.log('its working..')
         try {
@@ -51,6 +41,27 @@ module.exports = {
         try {
             const studentId = req.params.sId;
             let student = await service.delete(studentId);
+            res.statusCode = 200;
+            res.send(student);
+        } catch (error) {
+            res.statusCode = 500;
+            res.send(error.message);
+        }
+    },
+    login: async function (req, res) {
+        const { email, password } = req.body;
+        try {
+            const student = await service.login(req.body);
+            res.statusCode = 200;
+            res.send(student);            
+        } catch (error) {
+            res.statusCode = 500;
+            res.send(error.message)
+        }
+    },
+    addStudent: async function (req, res) {
+        try {
+            let student = await service.addStudent(req.body);
             res.statusCode = 200;
             res.send(student);
         } catch (error) {

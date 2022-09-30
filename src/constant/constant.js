@@ -9,6 +9,6 @@ module.exports = {
     },
     PORT : process.env.PORT || 8000,
     SECRETE_KEY: "THISISSECREATEKEY",
-    swaggerPORT: process.env.PORT || "localhost:3001",
+    swaggerPORT: process.env.PORT || "localhost:8000",
   };
   

@@ -1,6 +1,10 @@
 const AppConfig = require("../constant/constant");
+const Student = require("./contents/student.docs");
+const Staff = require("./contents/staff.docs");
+const Course = require("./contents/course.doc");
+
 module.exports = {
-    swagger: "2.0",
+    "swagger": "2.0",
     info: {
         version: "1.0.0",
         title: "Institute Manegement",
@@ -33,6 +37,13 @@ module.exports = {
     },
     // // definitions -----------------------------------------------------------------
     definitions: {
-        ...Student.defination
+        ...Student.definations,
+        ...Staff.definations,
+        ...Course.definations
+    },
+    paths: {
+        ...Student.path,
+        ...Staff.path,
+        ...Course.path
     }
-    }
+}
