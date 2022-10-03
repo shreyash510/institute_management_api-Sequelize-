@@ -7,7 +7,7 @@ exports.definations = {
         required: [],
         properties: {}
     },
-    register: {
+    signIn: {
         required: [],
         properties: {
             studentId: {
@@ -36,7 +36,7 @@ exports.definations = {
             }
         }
     },
-    update: {
+    studentUpdate: {
         required: [],
         properties: {
             // studentId: {
@@ -103,7 +103,7 @@ exports.path = {
                 200: {
                     description: "get student by Id",
                     schema: {
-                        $ref: "#/definitions/register"
+                        // $ref: "#/definitions/signIn"
                     },
                 },
             },
@@ -124,7 +124,7 @@ exports.path = {
                     type: "object",
                     description: "Add new Student information.",
                     schema: {
-                      $ref: `#/definitions/register`,
+                      $ref: `#/definitions/signIn`,
                     },
                   },
             ],
@@ -158,7 +158,7 @@ exports.path = {
                     type: "object",
                     description: "update information.",
                     schema: {
-                      $ref: `#/definitions/update`,
+                      $ref: `#/definitions/studentUpdate`,
                     },
                   },
             ],

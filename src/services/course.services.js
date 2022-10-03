@@ -12,8 +12,7 @@ module.exports = {
     },
     addCourse: async function (data) {
         let course = await Course.create(data);
-        return course? "course Inserted Successfully" : "Insertion failed!"
-        
+        return course? "course Inserted Successfully" : "Insertion failed!"  
     },
     update: async function (courseId, courseModel) {
         let course = await Course.update({

@@ -1,18 +1,19 @@
 const jwt = require('jsonwebtoken');
 const constants = require('../constant/constant');
-const { Auth } = require('../model/index');
+const { User } = require('../model/index');
 
 const authMiddleware = async (req, res, next) => {
     let token = req.headers["token"];
     try {
         let verifiedToken = jwt.verify(token, constants.SECRETE_KEY);
         let data = verifiedToken.data;
-        let user = await Auth.findOne({
+        console.log(data)
+        let userData = await User.findOne({
             where: {
-                AuthEmail: data.email,
+                authEmail: data.authEmail,
             }
         });
-        req.Auth = user;
+        req.User = userData;
         next();
         return;
     }

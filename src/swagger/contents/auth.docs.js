@@ -8,7 +8,7 @@ exports.definations = {
             },
             authPassword : {
                 type : "string",
-                example : "yogesh@123"
+                example : "Admin@123"
             }
         }
     },
@@ -23,18 +23,22 @@ exports.path = {
             summary : "Login",
             parameters : [
                 {
-                    name: "AuthIdId",
-                    in: "headers",
+                    name: "User Login",
                     required: true,
-                    type: "number",
-                },
+                    in: "body",
+                    type: "object",
+                    description: "User login",
+                    schema: {
+                      $ref: `#/definitions/authLogin`,
+                    },
+                  },
                 
             ],
             responses : {
                 200 : {
                     description : "login",
                     schema : {
-                        $ref : "#/definations/authlogin"
+                        $ref : "#/definations/authLogin"
                     },
                 }
             }

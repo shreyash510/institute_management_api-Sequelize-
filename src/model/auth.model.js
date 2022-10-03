@@ -5,16 +5,16 @@ module.exports = (sequelizeInstance) => {
     class User extends Model { }
     User.init(
         {
-            AuthId: {
+            authId: {
                 type: DataTypes.INTEGER,
                 autoIncrement: true,
                 primaryKey: true
             },
-            AuthEmail: {
+            authEmail: {
                 type: DataTypes.STRING,
                 allowNull: false,
             },
-            AuthPassword: {
+            authPassword: {
                 type: DataTypes.STRING,
                 allowNull: false,
             }

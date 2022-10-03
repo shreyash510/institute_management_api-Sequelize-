@@ -21,12 +21,12 @@ const sequelize = new Sequelize(
 const Student = StudentModelFn(sequelize);
 const Course = CourseModelFn(sequelize);
 const Staff = StaffModelFn(sequelize);
-const Auth = AuthModelFn(sequelize);
+const User = AuthModelFn(sequelize);
 
 module.exports = {
     Staff,
     Course,
     Student,
-    Auth,
+    User,
     db : sequelize
 }
